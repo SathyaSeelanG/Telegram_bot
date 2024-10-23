@@ -1,6 +1,8 @@
 [build]
-  functions = "netlify/functions"
-  publish = "public"
+  functions = "api"  # Path to your functions directory
+  publish = "public"  # This can be omitted if not using a static site
 
-[dev]
-  functions = "netlify/functions"
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/index"
+  status = 200
