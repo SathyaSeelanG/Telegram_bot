@@ -2,9 +2,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const fs = require('fs');
 
 // Load dataset
-// const dataset = JSON.parse(fs.readFileSync('dataset.json'));
-const dataset = JSON.parse(fs.readFileSync(__dirname + '/dataset.json'));
-
+const dataset = JSON.parse(fs.readFileSync('dataset.json'));
 
 // Function to handle /start command
 const start = (msg) => {
