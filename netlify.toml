@@ -6,3 +6,8 @@
   from = "/*"
   to = "/.netlify/functions/index"
   status = 200
+  [build]
+  functions = "api"  # Path to your functions directory
+  publish = "public"  # Optional, if not using static files
+  command = "npm install"  # Add this line to ensure dependencies are installed
+
