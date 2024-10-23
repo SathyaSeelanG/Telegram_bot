@@ -1,6 +1,5 @@
 [build]
   functions = "api"  # Path to your functions directory
-  publish = "public"  # This can be omitted if not using a static site
   command = "npm install"  # Ensure dependencies are installed
 
 [[redirects]]
