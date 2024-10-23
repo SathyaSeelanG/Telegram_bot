@@ -1,5 +1,5 @@
 [build]
-  functions = "api"  # Path to your functions directory
+  functions = "."  # Path to your functions directory (set to root)
   command = "npm install"  # Ensure dependencies are installed
 
 [[redirects]]
