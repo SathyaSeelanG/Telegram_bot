@@ -1,8 +1,9 @@
 const TelegramBot = require('node-telegram-bot-api');
 const fs = require('fs');
-
+require('dotenv').config();
 // Load dataset
 const dataset = JSON.parse(fs.readFileSync('dataset.json'));
+// console.log('Dataset path:', dataset);
 
 // Function to handle /start command
 const start = (msg) => {
@@ -28,8 +29,8 @@ const getResponse = (userInput) => {
     return "I'm sorry, I don't understand that.";
 };
 
-// Replace this with your own bot token from Telegram's BotFather
-const token = '7412769657:AAGAUf8mtYsfNYv9oIR3jo4nzxbhnfhO_q0';
+
+const token = process.env.BOT_TOKEN;
 
 // Create a bot instance
 const bot = new TelegramBot(token, { polling: true });
